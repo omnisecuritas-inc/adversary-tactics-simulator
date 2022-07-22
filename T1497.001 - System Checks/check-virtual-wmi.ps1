@@ -1,3 +1,0 @@
-$Manufacturer = Get-WmiObject -Class Win32_ComputerSystem | select-object -expandproperty "Manufacturer"
-$Model = Get-WmiObject -Class Win32_ComputerSystem | select-object -expandproperty "Model"
-if((($Manufacturer.ToLower() -eq "microsoft corporation") -and ($Model.ToLower().contains("virtual"))) -or ($Manufacturer.ToLower().contains("vmware")) -or ($Model.ToLower() -eq "virtualbox")) {write-host "Virtualization environment detected!"} else {write-host "No virtualization environment detected!"}
