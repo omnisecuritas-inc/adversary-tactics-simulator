@@ -1,1 +1,0 @@
-New-LocalUser -Name "Administrator " -NoPassword
